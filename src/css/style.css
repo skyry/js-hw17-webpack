@@ -1,0 +1,106 @@
+@import 'normalize.css';
+@import '../assets/fonts.css';
+
+* {
+    font-family: 'Roboto', sans-serif;
+}   
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#search-container {
+    margin: 2rem 0;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+}
+
+#search-input {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #444;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #2a2a2a;
+    color: #f0f0f0;
+}
+
+#results {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1200px;
+    padding: 1rem;
+    box-sizing: border-box;
+    background-color: #252525;
+}
+
+.movie {
+    background: #2a2a2a;
+    border: 1px solid #444;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    color: #f0f0f0;
+}
+
+.movie:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.movie img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+#pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+    gap: 1rem;
+}
+
+#pagination-container button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    background-color: #333;
+    color: #e0e0e0;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+#pagination-container button:hover:not(:disabled) {
+    background-color: #444;
+}
+
+#pagination-container button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
